@@ -451,7 +451,7 @@ var resizePizzas = function(size) {
     
   function changePizzaSizes(size) {
     // moved this from the for loop as all pizzas have the same size
-    var selector = document.getElementsByClassName("randomPizzaContainer")
+    var selector = document.getElementsByClassName("randomPizzaContainer");
     var dx = determineDx(selector[0], size);
     var newwidth = (selector[0].offsetWidth + dx) + 'px';
     for (var i = 0; i < selector.length; i++) {
@@ -507,7 +507,7 @@ function updatePositions() {
   var items = document.getElementsByClassName('mover');
   // document.body.scrollTop is no longer supported in Chrome.
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  var scrollCalculation = (scrollTop / 1250)
+  var scrollCalculation = (scrollTop / 1250);
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin(scrollCalculation + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
